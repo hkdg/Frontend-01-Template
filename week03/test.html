@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // 数字转字符串  -- 太忙了  未完待续.....
+        convertNumberToString(100,16); // 64
+        function convertNumberToString (number, x) {
+            if (arguments.length < 2)x = 10;
+            let integer = Math.floor(number);
+            let fraction = number - integer;
+            let string = '';
+            while(integer > 0) {
+                string = String(integer % x) + string;
+                integer = Math.floor(integer / x);
+            }
+            return string;
+        } 
+        
+    </script>
+</body>
+</html>
